@@ -273,6 +273,7 @@ func (server *Server) run(ctx context.Context, tasker taskworker) {
 			// A peer disconnected.
 			//log.Debug("Removing p2p peer", "peers", len(peers)-1, "req", "err", pd.err)
 			// fmt.Println("Del peer", pd.RemoteID())
+			log.Debug("Removing p2p peer", "peers", pd.RemoteID())
 			delete(peers, pd.RemoteID())
 		}
 	}
